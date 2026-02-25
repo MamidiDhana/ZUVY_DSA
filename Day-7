@@ -1,0 +1,33 @@
+//(231). Power of Two in Leetcode
+
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        if (n <= 0) {
+            return false;
+        }
+        if (n == 1) {
+            return true;
+        }
+        if (n % 2 != 0) {
+            return false;
+        }
+        return isPowerOfTwo(n / 2);
+    }
+}
+
+//(326). Power of Three in Leetcode
+
+class Solution {
+    public boolean isPowerOfThree(int n) {
+        if (n <= 0) {
+            return false;
+        }
+        if (n == 1) {
+            return true;
+        }
+        if (n % 3 != 0) {
+            return false;
+        }
+        return isPowerOfThree(n / 3);
+    }
+}
