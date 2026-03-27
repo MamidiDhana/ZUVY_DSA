@@ -1,0 +1,129 @@
+1.WAP to print the sum of the even numbers in a list
+   Input:[4,5,0,9,8,10]  Output :22
+  Program :
+      import java.util.*;
+class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> a=new ArrayList<>();
+        a.add(4);
+        a.add(5);
+        a.add(0);
+        a.add(9);
+        a.add(8);
+        a.add(10);
+        System.out.println(a);
+        int sum = 0;
+        for(int i = 0; i < a.size(); i++){
+            int value = a.get(i);
+            System.out.println(value);
+            if(value%2==0)
+            {
+                sum += value; 
+            }
+        }
+        System.out.println("Sum: " + sum);
+    }
+}
+
+2.WAP to split a list into two lists(Split ArrayList into Two Lists)
+   Input:[4,9,8,5,0,10]  Output :list-1:[4,9,8] & list-2:[5,0,10]
+   Program :
+             import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(4, 9, 8, 5, 0, 10));
+        System.out.println(list);
+        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+        int mid = list.size() / 2;
+        for(int i = 0; i < list.size(); i++){
+            if(i < mid){
+                list1.add(list.get(i));
+            } else {
+                list2.add(list.get(i));
+            }
+        }
+        System.out.println("List-1: " + list1);
+        System.out.println("List-2: " + list2);
+    }
+}
+
+
+//With User Input Version
+    program:
+              import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>();
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+        System.out.println("Enter elements:");
+        for(int i = 0; i < n; i++){
+            list.add(sc.nextInt());
+        }
+        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+        int mid = list.size() / 2;
+        for(int i = 0; i < list.size(); i++){
+            if(i < mid){
+                list1.add(list.get(i));
+            } else {
+                list2.add(list.get(i));
+            }
+        }
+        System.out.println("List-1: " + list1);
+        System.out.println("List-2: " + list2);
+    }
+}
+
+3.WAP to merge two lists into a single list
+input1:[4,9,8] input2:[5,0,10]   output:[4,9,8,5,0,10]
+  program: 
+            import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(4, 9, 8));
+        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(5, 0, 10));
+    ArrayList<Integer> list=new ArrayList<>();
+    
+        System.out.println("List-1: " + list1);
+        System.out.println("List-2: " + list2);
+        list.addAll(list1);
+        list.addAll(list2);
+        System.out.println(list);
+    }
+}
+
+//With User Input Version
+         program:
+                  
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        System.out.print("Enter number of elements for List-1: ");
+        int n1 = sc.nextInt();
+        System.out.println("Enter elements for List-1:");
+        for(int i = 0; i < n1; i++){
+            list1.add(sc.nextInt());
+        }
+        System.out.print("Enter number of elements for List-2: ");
+        int n2 = sc.nextInt();
+        System.out.println("Enter elements for List-2:");
+        for(int i = 0; i < n2; i++){
+            list2.add(sc.nextInt());
+        }
+        list.addAll(list1);
+        list.addAll(list2);
+        System.out.println("List-1: " + list1);
+        System.out.println("List-2: " + list2);
+        System.out.println("Merged List: " + list);
+    }
+}
