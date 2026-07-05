@@ -1,0 +1,24 @@
+ Question : Largest Element
+Brute force Approach :
+import java.util.*;
+class Solution {
+    public int largestElement(int[] nums) {
+    Arrays.sort(nums);
+    return nums[nums.length-1];
+    }
+}
+
+Optimal Approach :
+
+class Solution {
+    public int largestElement(int[] nums) {
+        int n=nums.length;
+        int max=Integer.MIN_VALUE;
+    for(int i=0;i<n;i++){
+    if(nums[i]>max)
+     max=nums[i];
+    }
+      return max;
+    }
+ return max;
+}
